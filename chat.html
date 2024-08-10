@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chade Swetha | Portfolio</title>
+    <link rel="stylesheet" href="chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" class="theme-toggle">
+            <span id="theme-icon">🌞</span>
+        </button>
+    </header>
+    <section id="home" class="section hero">
+        <div class="profile">
+            <div class="profile-image">
+                <img src="ai-pic.jpg" alt="Chade Swetha">
+            </div>
+            <div class="intro">
+                <h1>Hello 👋 </h1>
+                <h2>I'm Chade <span class="highlight">Swetha</span></h2>
+                <p>I'm a dedicated Machine Learning engineer with a passion for solving complex problems and continuously improving my skills.</p>
+                <a href="resume_No_phone.pdf (1).pdf" class="btn" target="_blank">DOWNLOAD RESUME</a>
+                <p>Contact me at: <a href="mailto:chadeswetha8919@gmail.com">chadeswetha8919@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/chade-swetha-96581a253/" target="_blank">Chade Swetha</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/chadeswetha/slash-mark"><img src="git.png" alt="GitHub"></a>
+                <a href="https://leetcode.com/u/chade_swetha/"><img src="leet.jpg" alt="LeetCode"></a>
+                <a href="https://www.geeksforgeeks.org/user/chadeswetha/"><img src="geeks.jpg" alt="GeeksforGeeks"></a>
+                <a href="https://www.hackerrank.com/profile/chadeswetha"><img src="haker.png" alt="HackerRank"></a>
+                <a href="https://www.naukri.com/code360/profile/chadeswetha"><img src="ninja.png" alt="Naukri"></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Check for saved user preference, if any, on initial load
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.classList.add(currentTheme);
+            themeIcon.textContent = currentTheme === 'dark-mode' ? '🌜' : '🌞';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const theme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+            themeIcon.textContent = theme === 'dark-mode' ? '🌜' : '🌞';
+            // Save the user preference in local storage
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>
