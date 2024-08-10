@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.section {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-image img {
+    width: 150px;
+    border-radius: 40%;
+    height: 100px;
+}
+
+.intro {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e74c3c; /* Red */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b; /* Darker red */
+}
+
+.social-links a img {
+    width: 30px;
+    margin: 0 10px;
+    border-radius: 50%;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f0f0f0; /* Light ash */
+    color: #212529; /* Dark ash */
+}
+
+.light-mode .btn {
+    background-color: #e74c3c; /* Red */
+}
+
+.light-mode .btn:hover {
+    background-color: #c0392b; /* Darker red */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1e1e1e; /* Black */
+    color: #f0f0f0; /* Light ash */
+}
+
+.dark-mode .btn {
+    background-color: #e74c3c; /* Red */
+}
+
+.dark-mode .btn:hover {
+    background-color: #c0392b; /* Darker red */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+}
